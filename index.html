@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Chetan Prakash — silicon engineer at Google, working on GPU neural accelerators and exploring language models, alignment, and mechanistic interpretability.">
+    <meta name="description" content="Chetan Prakash — silicon engineer at Google, working on GPU neural accelerators and exploring optimization, reinforcement learning, and language models.">
     <meta name="theme-color" content="#f7f6f2">
     <title>Chetan Prakash</title>
     <style>
@@ -24,7 +24,10 @@
       .eyebrow { font-size: 12px; letter-spacing: .17em; text-transform: uppercase; color: var(--muted); }
       h1 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(50px, 9vw, 92px); line-height: 1.08; letter-spacing: -.055em; margin: 24px 0; }
       .intro { max-width: 680px; color: var(--muted); font-size: 20px; }
-      .link { display: inline-block; margin-top: 22px; font-size: 16px; }
+      .social-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 28px; }
+      .icon-link { display: inline-flex; align-items: center; gap: 8px; }
+      .icon { width: 20px; height: 20px; flex: 0 0 20px; }
+      .project-link { font-size: 14px; }
       .about { border-top: 1px solid var(--line); margin-top: 80px; padding-top: 26px; display: grid; grid-template-columns: 1fr 2fr; gap: 24px; }
       h2 { font-size: 14px; font-weight: 550; margin: 0; }
       .about p { margin: 0 0 16px; color: var(--muted); }
@@ -54,9 +57,13 @@
       <main id="main">
         <div class="eyebrow">Silicon engineering · Machine learning</div>
         <h1>Chetan Prakash<span style="color:var(--green)">.</span></h1>
-        <p class="intro">I’m a silicon engineer at Google in Bangalore, working on GPU neural accelerators. My research interests span language models, AI alignment, and mechanistic interpretability.</p>
-        <a class="link" href="https://github.com/chetan1729">Explore my code <span aria-hidden="true">↗</span></a>
-        <div class="tags" aria-label="Research interests"><span>Language models</span><span>Mechanistic interpretability</span><span>AI alignment</span><span>Vision Transformers</span><span>Deep reinforcement learning</span></div>
+        <p class="intro">I’m a silicon engineer at Google in Bangalore, where I work on GPU neural accelerators. My research interests span optimization, reinforcement learning, language models, and AI alignment.</p>
+        <p class="intro">My independent projects explore language model pretraining, preference optimization, and Vision Transformers. I hold a B.Tech. in Electrical Engineering from Delhi Technological University.</p>
+        <div class="social-links">
+          <a class="icon-link" href="https://github.com/chetan1729"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.64 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub</span></a>
+          <a class="icon-link" href="https://www.linkedin.com/in/prakashchetanofficial/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><path fill="var(--paper)" d="M5 9h3v10H5zm1.5-5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5ZM10 9h2.9v1.4h.04A3.2 3.2 0 0 1 15.8 8.8c3.06 0 3.62 2.01 3.62 4.62V19h-3v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.61V19H10Z"/></svg><span>LinkedIn</span></a>
+        </div>
+        <div class="tags" aria-label="Research interests"><span>Language models</span><span>Optimization</span><span>AI alignment</span><span>Vision Transformers</span><span>Reinforcement learning</span></div>
 
         <section class="about" id="projects" aria-labelledby="projects-heading">
           <h2 id="projects-heading">Selected projects</h2>
@@ -65,16 +72,19 @@
               <div class="meta">January 2026 · Language model pretraining</div>
               <h3><a href="https://github.com/chetan1729/optiGPT">optiGPT</a></h3>
               <p>A 124M-parameter decoder-only Transformer built and trained from scratch on FineWeb-EDU. The training pipeline combines distributed training, Flash Attention, and mixed precision across four RTX 3090 GPUs. Achieved 30.27% zero-shot HellaSwag accuracy.</p>
+              <a class="icon-link project-link" href="https://github.com/chetan1729/optiGPT"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.64 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>View on GitHub</span></a>
             </article>
             <article class="entry">
               <div class="meta">February 2026 · Preference optimization</div>
               <h3><a href="https://github.com/chetan1729/directrix">Directrix</a></h3>
               <p>Aligning Gemma-2B with Direct Preference Optimization on Anthropic’s HH-RLHF dataset. Developed a custom merge protocol for LoRA adapters in grouped-query attention kernels and evaluated the tradeoffs between alignment and STEM performance using JAX. Achieved 62.2% preference accuracy.</p>
+              <a class="icon-link project-link" href="https://github.com/chetan1729/directrix"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.64 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>View on GitHub</span></a>
             </article>
             <article class="entry">
               <div class="meta">May 2026 · Vision Transformer training</div>
               <h3><a href="https://github.com/chetan1729/marr">Marr</a></h3>
               <p>Training an 86M-parameter ViT-Base from scratch on ImageNet-1K with distributed training, data augmentation, and regularization. Built a streaming data pipeline and adapted positional embeddings for higher-resolution training, reaching 67.01% top-1 accuracy.</p>
+              <a class="icon-link project-link" href="https://github.com/chetan1729/marr"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.64 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>View on GitHub</span></a>
             </article>
           </div>
         </section>
@@ -122,8 +132,8 @@
           <h2 id="contact-heading">Get in touch</h2>
           <div class="contacts">
             <a href="mailto:chetanprakash157@gmail.com">Email</a>
-            <a href="https://github.com/chetan1729">GitHub</a>
-            <a href="https://www.linkedin.com/in/prakashchetanofficial/">LinkedIn</a>
+            <a class="icon-link" href="https://github.com/chetan1729"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.64 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub</span></a>
+            <a class="icon-link" href="https://www.linkedin.com/in/prakashchetanofficial/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><path fill="var(--paper)" d="M5 9h3v10H5zm1.5-5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5ZM10 9h2.9v1.4h.04A3.2 3.2 0 0 1 15.8 8.8c3.06 0 3.62 2.01 3.62 4.62V19h-3v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.61V19H10Z"/></svg><span>LinkedIn</span></a>
           </div>
         </section>
       </main>
