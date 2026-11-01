@@ -16,8 +16,7 @@
       .skip { position: absolute; left: 20px; top: -100px; }
       .skip:focus { top: 12px; }
       .wrap { width: min(100% - 48px, 960px); margin-inline: auto; }
-      header { display: flex; justify-content: space-between; align-items: center; padding-block: 30px; border-bottom: 1px solid var(--line); }
-      .mark { color: var(--ink); text-decoration: none; font-weight: 650; letter-spacing: -.04em; font-size: 24px; }
+      header { display: flex; justify-content: flex-end; align-items: center; padding-block: 30px; border-bottom: 1px solid var(--line); }
       nav { display: flex; flex-wrap: wrap; gap: 12px 24px; }
       nav a { font-size: 14px; text-decoration: none; }
       main { padding-block: clamp(60px, 9vw, 100px) 70px; }
@@ -51,7 +50,6 @@
     <a class="skip" href="#main">Skip to content</a>
     <div class="wrap">
       <header>
-        <a class="mark" href="./" aria-label="Chetan Prakash home">CP.</a>
         <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
       </header>
       <main id="main">
