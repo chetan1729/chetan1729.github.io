@@ -9,3 +9,5 @@ Edit `index.html` to update the biography, links, and styling. No build tools or
 ## Hosting
 
 GitHub Pages serves the root of the `main` branch. Push changes to `main` to update the site. The repository is public so it can use GitHub Pages on the free plan. No custom domain is required.
+
+The website contains selected profile content. The CV PDF is not included or linked.

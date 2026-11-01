@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Chetan Prakash's personal website.">
+    <meta name="description" content="Chetan Prakash — silicon engineer at Google, working on GPU neural accelerators and exploring language models, alignment, and mechanistic interpretability.">
     <meta name="theme-color" content="#f7f6f2">
     <title>Chetan Prakash</title>
     <style>
@@ -18,15 +18,28 @@
       .wrap { width: min(100% - 48px, 960px); margin-inline: auto; }
       header { display: flex; justify-content: space-between; align-items: center; padding-block: 30px; border-bottom: 1px solid var(--line); }
       .mark { color: var(--ink); text-decoration: none; font-weight: 650; letter-spacing: -.04em; font-size: 24px; }
-      header a:last-child { font-size: 14px; }
-      main { min-height: calc(100svh - 186px); padding-block: clamp(70px, 12vw, 140px); }
+      nav { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+      nav a { font-size: 14px; text-decoration: none; }
+      main { padding-block: clamp(60px, 9vw, 100px) 70px; }
       .eyebrow { font-size: 12px; letter-spacing: .17em; text-transform: uppercase; color: var(--muted); }
       h1 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(50px, 9vw, 92px); line-height: 1.08; letter-spacing: -.055em; margin: 24px 0; }
-      .intro { max-width: 480px; color: var(--muted); font-size: 20px; }
+      .intro { max-width: 680px; color: var(--muted); font-size: 20px; }
       .link { display: inline-block; margin-top: 22px; font-size: 16px; }
       .about { border-top: 1px solid var(--line); margin-top: 80px; padding-top: 26px; display: grid; grid-template-columns: 1fr 2fr; gap: 24px; }
       h2 { font-size: 14px; font-weight: 550; margin: 0; }
-      .about p { margin: 0; max-width: 440px; color: var(--muted); }
+      .about p { margin: 0 0 16px; color: var(--muted); }
+      .about > div { min-width: 0; }
+      .about { grid-template-columns: 180px 1fr; scroll-margin-top: 30px; margin-top: 60px; }
+      h3 { font-size: 19px; line-height: 1.45; font-weight: 600; margin: 0 0 9px; }
+      .meta { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+      .entry + .entry { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--line); }
+      .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
+      .tags span { border: 1px solid var(--line); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: var(--green); }
+      ul { padding-left: 20px; color: var(--muted); margin: 0; }
+      li + li { margin-top: 9px; }
+      .contacts { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+      .contacts a { overflow-wrap: anywhere; }
+      @media (max-width: 700px) { header { align-items: flex-start; gap: 24px; } nav { justify-content: flex-end; gap: 8px 16px; } .about { grid-template-columns: 1fr; gap: 18px; } }
       footer { border-top: 1px solid var(--line); padding-block: 23px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 20px; }
       @media (max-width: 560px) { .wrap { width: calc(100% - 40px); } .about { grid-template-columns: 1fr; gap: 12px; margin-top: 60px; } .intro { font-size: 18px; } }
     </style>
@@ -36,16 +49,94 @@
     <div class="wrap">
       <header>
         <a class="mark" href="./" aria-label="Chetan Prakash home">CP.</a>
-        <a href="https://github.com/chetan1729">GitHub <span aria-hidden="true">↗</span></a>
+        <nav aria-label="Main navigation"><a href="#research">Research</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
       </header>
       <main id="main">
-        <div class="eyebrow">Personal website</div>
+        <div class="eyebrow">Silicon engineering · Machine learning</div>
         <h1>Chetan Prakash<span style="color:var(--green)">.</span></h1>
-        <p class="intro">Welcome to my corner of the web.</p>
-        <a class="link" href="https://github.com/chetan1729">Explore my GitHub <span aria-hidden="true">↗</span></a>
-        <section class="about" aria-labelledby="about-heading">
-          <h2 id="about-heading">Around the web</h2>
-          <p>You can find my code and projects on <a href="https://github.com/chetan1729">GitHub</a>.</p>
+        <p class="intro">I’m a silicon engineer at Google in Bangalore, working on GPU neural accelerators. My research interests span language models, AI alignment, and mechanistic interpretability.</p>
+        <a class="link" href="https://github.com/chetan1729">Explore my code <span aria-hidden="true">↗</span></a>
+        <div class="tags" aria-label="Research interests"><span>Language models</span><span>Mechanistic interpretability</span><span>AI alignment</span><span>Vision Transformers</span><span>Deep reinforcement learning</span></div>
+
+        <section class="about" id="research" aria-labelledby="research-heading">
+          <h2 id="research-heading">Research</h2>
+          <div>
+            <article>
+              <div class="meta">Preprint · July 2026 · Chetan Prakash</div>
+              <h3>Computational or Data-Specific? Distinguishing Sparse Autoencoder Features via Distribution Shift</h3>
+              <p>I study whether sparse autoencoder features reflect a model’s computation or regularities in its training data. This work uses distribution shift to test whether feature directions remain recoverable and their causal effects stay consistent. In a GPT-2-scale model, recoverability predicted causal consistency after controlling for feature frequency and layer.</p>
+              <a href="https://drive.google.com/file/d/1LSnslSKNkS4EOpGJutilQEpGiBAoUJE3/view">Read the preprint <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section class="about" id="projects" aria-labelledby="projects-heading">
+          <h2 id="projects-heading">Selected projects</h2>
+          <div>
+            <article class="entry">
+              <div class="meta">January 2026 · Language model pretraining</div>
+              <h3><a href="https://github.com/chetan1729/optiGPT">optiGPT</a></h3>
+              <p>A 124M-parameter decoder-only Transformer built and trained from scratch on FineWeb-EDU. The training pipeline combines distributed training, Flash Attention, and mixed precision across four RTX 3090 GPUs. Achieved 30.27% zero-shot HellaSwag accuracy.</p>
+            </article>
+            <article class="entry">
+              <div class="meta">February 2026 · Preference optimization</div>
+              <h3><a href="https://github.com/chetan1729/directrix">Directrix</a></h3>
+              <p>Aligning Gemma-2B with Direct Preference Optimization on Anthropic’s HH-RLHF dataset. Developed a custom merge protocol for LoRA adapters in grouped-query attention kernels and evaluated the tradeoffs between alignment and STEM performance using JAX. Achieved 62.2% preference accuracy.</p>
+            </article>
+            <article class="entry">
+              <div class="meta">May 2026 · Vision Transformer training</div>
+              <h3><a href="https://github.com/chetan1729/marr">Marr</a></h3>
+              <p>Training an 86M-parameter ViT-Base from scratch on ImageNet-1K with distributed training, data augmentation, and regularization. Built a streaming data pipeline and adapted positional embeddings for higher-resolution training, reaching 67.01% top-1 accuracy.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="about" id="experience" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+          <div>
+            <div class="meta">August 2022–present · Bangalore, India</div>
+            <h3>Silicon Engineer · Google</h3>
+            <p>I work on the implementation and optimization of GPU neural accelerators, with a focus on performance, power efficiency, and timing closure for machine learning workloads.</p>
+            <p>My work includes clock-gating optimization, machine learning for silicon prediction, and tools for timing analysis, power profiling, and implementation quality checks.</p>
+            <div class="meta">Patent</div>
+            <p>Enhancing Test-Control Connectivity for Clock Gating · WO2025264207</p>
+          </div>
+        </section>
+
+        <section class="about" aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <div>
+            <div class="meta">August 2018–June 2022 · New Delhi, India</div>
+            <h3>Delhi Technological University</h3>
+            <p>B.Tech. in Electrical Engineering · GPA: 9.15/10</p>
+            <p>Coursework in machine learning, numerical and engineering optimization, data structures and algorithms, digital signal processing, and control systems.</p>
+          </div>
+        </section>
+
+        <section class="about" aria-labelledby="honors-heading">
+          <h2 id="honors-heading">Selected honors</h2>
+          <div><ul>
+            <li>Google Tech Innovation Award for voltage optimization methodology.</li>
+            <li>Central Sector Top Class Education Scholarship recipient.</li>
+            <li>All India Rank 461 in GATE 2022, Electronics and Communication.</li>
+          </ul></div>
+        </section>
+
+        <section class="about" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Tools &amp; community</h2>
+          <div>
+            <p>Python, C/C++, and Tcl; PyTorch, JAX, TensorFlow, and TransformerLens; distributed training with DDP and FSDP, Linux, and experiment orchestration.</p>
+            <p>Technical reviewer for <em>Neural Network Projects with Python, 2nd Edition</em>, reviewing neural network architectures and code for technical accuracy.</p>
+          </div>
+        </section>
+
+        <section class="about" id="contact" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Get in touch</h2>
+          <div class="contacts">
+            <a href="mailto:chetanprakash157@gmail.com">Email</a>
+            <a href="https://github.com/chetan1729">GitHub</a>
+            <a href="https://www.linkedin.com/in/prakashchetanofficial/">LinkedIn</a>
+          </div>
         </section>
       </main>
       <footer><span>Chetan Prakash</span><span>Hosted on GitHub Pages</span></footer>
