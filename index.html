@@ -23,7 +23,6 @@
       .eyebrow { font-size: 12px; letter-spacing: .17em; text-transform: uppercase; color: var(--muted); }
       h1 { font-family: Georgia, serif; font-weight: 400; font-size: clamp(50px, 9vw, 92px); line-height: 1.08; letter-spacing: -.055em; margin: 24px 0; }
       .intro { max-width: 680px; color: var(--muted); font-size: 20px; }
-      .social-links { display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 28px; }
       .icon-link { display: inline-flex; align-items: center; gap: 8px; }
       .icon { width: 20px; height: 20px; flex: 0 0 20px; }
       .project-link { font-size: 14px; }
@@ -37,10 +36,10 @@
       .entry + .entry { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--line); }
       .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
       .tags span { border: 1px solid var(--line); border-radius: 20px; padding: 4px 12px; font-size: 12px; color: var(--green); }
-      ul { padding-left: 20px; color: var(--muted); margin: 0; }
-      li + li { margin-top: 9px; }
       .contacts { display: flex; flex-wrap: wrap; gap: 12px 24px; }
-      .contacts a { overflow-wrap: anywhere; }
+      .contact-row { border-top: 1px solid var(--line); margin-top: 60px; padding-top: 24px; scroll-margin-top: 30px; }
+      .contacts a { width: 44px; height: 44px; justify-content: center; border-radius: 50%; }
+      .contacts a:hover { background: var(--line); }
       @media (max-width: 700px) { header { align-items: flex-start; gap: 24px; } nav { justify-content: flex-end; gap: 8px 16px; } .about { grid-template-columns: 1fr; gap: 18px; } }
       footer { border-top: 1px solid var(--line); padding-block: 23px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; gap: 20px; }
       @media (max-width: 560px) { .wrap { width: calc(100% - 40px); } .about { grid-template-columns: 1fr; gap: 12px; margin-top: 60px; } .intro { font-size: 18px; } }
@@ -50,17 +49,13 @@
     <a class="skip" href="#main">Skip to content</a>
     <div class="wrap">
       <header>
-        <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+        <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#contact">Contact</a></nav>
       </header>
       <main id="main">
         <div class="eyebrow">Silicon engineering · Machine learning</div>
         <h1>Chetan Prakash</h1>
         <p class="intro">I’m a silicon engineer at Google, where I work on GPU neural accelerators. My research interests span optimization, reinforcement learning, language models, and AI alignment.</p>
-        <p class="intro">My independent projects explore language model pretraining, preference optimization, and Vision Transformers. I hold a B.Tech. in Electrical Engineering from Delhi Technological University.</p>
-        <div class="social-links">
-          <a class="icon-link" href="https://github.com/chetan1729"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.64 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub</span></a>
-          <a class="icon-link" href="https://www.linkedin.com/in/prakashchetanofficial/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><path fill="var(--paper)" d="M5 9h3v10H5zm1.5-5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5ZM10 9h2.9v1.4h.04A3.2 3.2 0 0 1 15.8 8.8c3.06 0 3.62 2.01 3.62 4.62V19h-3v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.61V19H10Z"/></svg><span>LinkedIn</span></a>
-        </div>
+        <p class="intro">My independent projects explore language model pretraining, preference optimization, and Vision Transformers. I completed my undergrad from Delhi Technological University.</p>
         <div class="tags" aria-label="Research interests"><span>Language models</span><span>Optimization</span><span>AI alignment</span><span>Vision Transformers</span><span>Reinforcement learning</span></div>
 
         <section class="about" id="projects" aria-labelledby="projects-heading">
@@ -87,51 +82,13 @@
           </div>
         </section>
 
-        <section class="about" id="experience" aria-labelledby="experience-heading">
-          <h2 id="experience-heading">Experience</h2>
-          <div>
-            <div class="meta">August 2022–present</div>
-            <h3>Silicon Engineer · Google</h3>
-            <p>I work on the implementation and optimization of GPU neural accelerators, with a focus on performance, power efficiency, and timing closure for machine learning workloads.</p>
-            <p>My work includes clock-gating optimization, machine learning for silicon prediction, and tools for timing analysis, power profiling, and implementation quality checks.</p>
-          </div>
-        </section>
-
-        <section class="about" aria-labelledby="education-heading">
-          <h2 id="education-heading">Education</h2>
-          <div>
-            <div class="meta">August 2018–June 2022 · New Delhi, India</div>
-            <h3>Delhi Technological University</h3>
-            <p>B.Tech. in Electrical Engineering · GPA: 9.15/10</p>
-            <p>Coursework in machine learning, numerical and engineering optimization, data structures and algorithms, digital signal processing, and control systems.</p>
-          </div>
-        </section>
-
-        <section class="about" aria-labelledby="honors-heading">
-          <h2 id="honors-heading">Selected honors</h2>
-          <div><ul>
-            <li>Google Tech Innovation Award for Vmin Optimization methodology.</li>
-            <li>Central Sector Top Class Education Scholarship recipient.</li>
-            <li>All India Rank 461 in GATE 2022, Electronics and Communication.</li>
-          </ul></div>
-        </section>
-
-        <section class="about" aria-labelledby="skills-heading">
-          <h2 id="skills-heading">Tools &amp; community</h2>
-          <div>
-            <p>Python, C/C++, and Tcl; PyTorch, JAX, TensorFlow, and TransformerLens; distributed training with DDP and FSDP, Linux, and experiment orchestration.</p>
-            <p>Technical reviewer for <em>Neural Network Projects with Python, 2nd Edition</em>, reviewing neural network architectures and code for technical accuracy.</p>
-          </div>
-        </section>
-
-        <section class="about" id="contact" aria-labelledby="contact-heading">
-          <h2 id="contact-heading">Get in touch</h2>
+        <div class="contact-row" id="contact" role="group" aria-label="Contact links">
           <div class="contacts">
-            <a href="mailto:chetanprakash157@gmail.com">Email</a>
-            <a class="icon-link" href="https://github.com/chetan1729"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.64 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg><span>GitHub</span></a>
-            <a class="icon-link" href="https://www.linkedin.com/in/prakashchetanofficial/"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><path fill="var(--paper)" d="M5 9h3v10H5zm1.5-5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5ZM10 9h2.9v1.4h.04A3.2 3.2 0 0 1 15.8 8.8c3.06 0 3.62 2.01 3.62 4.62V19h-3v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.61V19H10Z"/></svg><span>LinkedIn</span></a>
+            <a class="icon-link" href="mailto:chetanprakash157@gmail.com" aria-label="Email" title="Email"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            <a class="icon-link" href="https://github.com/chetan1729" aria-label="GitHub" title="GitHub"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.09c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1.01 1.73 2.64 1.23 3.29.94.1-.73.39-1.23.71-1.51-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.1 1.15a10.8 10.8 0 0 1 5.64 0c2.15-1.45 3.1-1.15 3.1-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.1c0 .3.2.65.78.54A11.25 11.25 0 0 0 12 .75Z"/></svg></a>
+            <a class="icon-link" href="https://www.linkedin.com/in/prakashchetanofficial/" aria-label="LinkedIn" title="LinkedIn"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="1" y="1" width="22" height="22" rx="2" fill="currentColor"/><path fill="var(--paper)" d="M5 9h3v10H5zm1.5-5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5ZM10 9h2.9v1.4h.04A3.2 3.2 0 0 1 15.8 8.8c3.06 0 3.62 2.01 3.62 4.62V19h-3v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.61V19H10Z"/></svg></a>
           </div>
-        </section>
+        </div>
       </main>
       <footer><span>Chetan Prakash</span><span>Hosted on GitHub Pages</span></footer>
     </div>
